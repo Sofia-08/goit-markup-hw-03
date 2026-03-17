@@ -13,7 +13,7 @@ h4,
 h5,
 h6,
 p {
-  margin: 0; /* B1 */
+  margin: 0;
 }
 
 ul {
@@ -32,14 +32,14 @@ a {
   text-decoration: none;
 }
 
-/* Контейнер (B6, B8 - виправлено на адаптивний) */
+/* Контейнер (Адаптивний) */
 .container {
   max-width: 1158px;
   padding: 0 15px;
   margin: 0 auto;
 }
 
-/* Секції (B16, B17) */
+/* Спільні класи для секцій */
 .section {
   padding: 120px 0;
 }
@@ -57,7 +57,7 @@ a {
   overflow: hidden;
 }
 
-/* Header (B10, B13, B14, B15 + ВИПРАВЛЕНО: контакти) */
+/* Header */
 .header {
   border-bottom: 1px solid #e7e9fc;
 }
@@ -119,8 +119,8 @@ a {
 }
 
 .contacts-link {
-  display: block; /* Важливо для padding */
-  padding: 24px 0; /* ВИПРАВЛЕНО: висота хедера через падінги контактів */
+  display: block;
+  padding: 24px 0; /* Виправлено: падінги для формування висоти хедера */
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -133,7 +133,7 @@ a {
   color: #404bbf;
 }
 
-/* Hero Section (ВИПРАВЛЕНО: hero-button) */
+/* Hero */
 .hero {
   background-color: #2e2f42;
   padding: 188px 0;
@@ -152,8 +152,8 @@ a {
 .hero-button {
   display: block;
   min-width: 169px;
-  height: auto; /* ВИПРАВЛЕНО: видалено фіксовану висоту */
-  padding: 16px 32px; /* ВИПРАВЛЕНО: розмір через падінги */
+  height: auto; /* Видалено фіксовану висоту */
+  padding: 16px 32px; /* Додано падінги для простору */
   border: none;
   border-radius: 4px;
   margin: 0 auto;
@@ -172,7 +172,7 @@ a {
   background-color: #404bbf;
 }
 
-/* Features (B10) */
+/* Features */
 .features-list {
   display: flex;
   gap: 24px;
@@ -197,7 +197,7 @@ a {
   letter-spacing: 0.02em;
 }
 
-/* Team (ВИПРАВЛЕНО: team-content) */
+/* Team */
 .team {
   background-color: #f4f4fd;
 }
@@ -223,7 +223,7 @@ a {
 }
 
 .team-content {
-  padding: 32px 16px; /* ВИПРАВЛЕНО: додано горизонтальні відступи */
+  padding: 32px 16px; /* Додано бокові падінги */
 }
 
 .team-subtitle {
@@ -240,7 +240,7 @@ a {
   line-height: 1.5;
 }
 
-/* Portfolio (B19) */
+/* Portfolio Grid */
 .portfolio-title {
   margin-bottom: 72px;
   font-size: 36px;
@@ -271,7 +271,7 @@ a {
 .portfolio-content {
   padding: 32px 16px;
   border: 1px solid #e7e9fc;
-  border-top: none; /* B19 */
+  border-top: none;
 }
 
 .portfolio-subtitle {
@@ -279,6 +279,8 @@ a {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
 }
 
 /* Footer */
