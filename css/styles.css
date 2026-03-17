@@ -1,8 +1,9 @@
-/* Базові стилі та скидання */
+/* Базові стилі */
 body {
   font-family: "Roboto", sans-serif;
   color: #434455;
   background-color: #ffffff;
+  margin: 0;
 }
 
 h1,
@@ -12,7 +13,7 @@ h4,
 h5,
 h6,
 p {
-  margin: 0;
+  margin: 0; /* B1 */
 }
 
 ul {
@@ -31,14 +32,14 @@ a {
   text-decoration: none;
 }
 
-/* Контейнер (ВИПРАВЛЕНО: Адаптивність через max-width) */
+/* Контейнер (B6, B8 - виправлено на адаптивний) */
 .container {
   max-width: 1158px;
   padding: 0 15px;
   margin: 0 auto;
 }
 
-/* Спільні класи */
+/* Секції (B16, B17) */
 .section {
   padding: 120px 0;
 }
@@ -56,7 +57,7 @@ a {
   overflow: hidden;
 }
 
-/* Header */
+/* Header (B10, B13, B14, B15 + ВИПРАВЛЕНО: контакти) */
 .header {
   border-bottom: 1px solid #e7e9fc;
 }
@@ -100,6 +101,7 @@ a {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-link:hover,
@@ -117,10 +119,13 @@ a {
 }
 
 .contacts-link {
+  display: block; /* Важливо для padding */
+  padding: 24px 0; /* ВИПРАВЛЕНО: висота хедера через падінги контактів */
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-link:hover,
@@ -128,10 +133,11 @@ a {
   color: #404bbf;
 }
 
-/* Hero */
+/* Hero Section (ВИПРАВЛЕНО: hero-button) */
 .hero {
   background-color: #2e2f42;
   padding: 188px 0;
+  text-align: center;
 }
 
 .hero-title {
@@ -141,13 +147,13 @@ a {
   line-height: 1.07;
   letter-spacing: 0.02em;
   color: #ffffff;
-  text-align: center;
 }
 
 .hero-button {
   display: block;
   min-width: 169px;
-  height: 56px;
+  height: auto; /* ВИПРАВЛЕНО: видалено фіксовану висоту */
+  padding: 16px 32px; /* ВИПРАВЛЕНО: розмір через падінги */
   border: none;
   border-radius: 4px;
   margin: 0 auto;
@@ -158,6 +164,7 @@ a {
   color: #ffffff;
   background-color: #4d5ae5;
   cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-button:hover,
@@ -165,7 +172,7 @@ a {
   background-color: #404bbf;
 }
 
-/* Features */
+/* Features (B10) */
 .features-list {
   display: flex;
   gap: 24px;
@@ -190,7 +197,7 @@ a {
   letter-spacing: 0.02em;
 }
 
-/* Team */
+/* Team (ВИПРАВЛЕНО: team-content) */
 .team {
   background-color: #f4f4fd;
 }
@@ -200,8 +207,6 @@ a {
   font-size: 36px;
   line-height: 1.11;
   text-align: center;
-  letter-spacing: 0.02em;
-  text-transform: capitalize;
   color: #2e2f42;
 }
 
@@ -217,9 +222,8 @@ a {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
-/* ВИПРАВЛЕНО: Додано горизонтальні падінги 16px */
 .team-content {
-  padding: 32px 16px;
+  padding: 32px 16px; /* ВИПРАВЛЕНО: додано горизонтальні відступи */
 }
 
 .team-subtitle {
@@ -228,18 +232,15 @@ a {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
-  letter-spacing: 0.02em;
-  color: #2e2f42;
 }
 
 .team-text {
   text-align: center;
   font-size: 16px;
   line-height: 1.5;
-  letter-spacing: 0.02em;
 }
 
-/* Portfolio */
+/* Portfolio (B19) */
 .portfolio-title {
   margin-bottom: 72px;
   font-size: 36px;
@@ -257,12 +258,20 @@ a {
 
 .portfolio-item {
   width: calc((100% - 48px) / 3);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-item:hover {
+  box-shadow:
+    0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-content {
   padding: 32px 16px;
   border: 1px solid #e7e9fc;
-  border-top: none;
+  border-top: none; /* B19 */
 }
 
 .portfolio-subtitle {
@@ -270,14 +279,6 @@ a {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
-  letter-spacing: 0.02em;
-  color: #2e2f42;
-}
-
-.portfolio-text {
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
 }
 
 /* Footer */
